@@ -13,5 +13,6 @@ public interface MovieRepository extends JpaRepository<Movie, Long>, CrudReposit
 
     @Modifying
     @Query("DELETE FROM Movie m WHERE m.movieId = :movieId")
+
     void deleteById(@Param("movieId") Long movieId);
 }
