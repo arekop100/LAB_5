@@ -12,7 +12,7 @@ import pl.edu.pwsztar.domain.entity.Movie;
 public interface MovieRepository extends JpaRepository<Movie, Long>, CrudRepository<Movie, Long> {
 
     @Modifying
-    @Query("DELETE FROM Movie m WHERE m.movieId = :movieId")
+    @Query("delete from Movie m where m.movieId = :movieId")
 
     void deleteById(@Param("movieId") Long movieId);
 }
